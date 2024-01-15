@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -22,6 +23,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -61,7 +63,7 @@ fun ArticleCard(
             modifier = Modifier
                 .padding(horizontal = ExtraSmallPadding)
                 .height(ArticleCardSize)
-                .padding(5.dp)
+                .padding(5.dp, 0.dp, 0.dp, 0.dp)
         ) {
             Text(
                 text = article.title,
@@ -76,7 +78,8 @@ fun ArticleCard(
                 Text(
                     text = article.source.name,
                     style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
-                    color = colorResource(id = R.color.body)
+                    color = colorResource(id = R.color.body),
+                    textAlign = TextAlign.Center
                 )
                 Spacer(modifier = Modifier.width(ExtraSmallPadding2))
                 Icon(
@@ -85,11 +88,12 @@ fun ArticleCard(
                     modifier = Modifier.size(SmallIconSize),
                     tint = colorResource(id = R.color.body)
                 )
-                Spacer(modifier = Modifier.width(ExtraSmallPadding))
+                Spacer(modifier = Modifier.width(ExtraSmallPadding2))
                 Text(
                     text = article.publishedAt,
                     style = MaterialTheme.typography.labelSmall,
-                    color = colorResource(id = R.color.body)
+                    color = colorResource(id = R.color.body),
+                    textAlign = TextAlign.Center
                 )
             }
         }
