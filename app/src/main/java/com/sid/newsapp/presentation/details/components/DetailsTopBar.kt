@@ -9,11 +9,14 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.material3.contentColorFor
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
 import com.sid.newsapp.R
 import com.sid.newsapp.ui.theme.NewsAppTheme
@@ -38,6 +41,10 @@ fun DetailsTopBar(
         navigationIcon = {
             IconButton(onClick = onBackClick) {
                 Icon(
+                    modifier = Modifier
+                        .semantics {
+                                   contentDescription = "Back Icon"
+                        },
                     painter = painterResource(id = R.drawable.ic_back_arrow),
                     contentDescription = null,
                 )
@@ -47,18 +54,30 @@ fun DetailsTopBar(
 
             IconButton(onClick = onBookMarkClick) {
                 Icon(
+                    modifier = Modifier
+                        .semantics {
+                            contentDescription = "Bookmark Button"
+                    },
                     painter = painterResource(id = R.drawable.ic_bookmark),
                     contentDescription = null
                 )
             }
             IconButton(onClick = onShareClick) {
                 Icon(
+                    modifier = Modifier
+                        .semantics {
+                            contentDescription = "Share Button"
+                        },
                     imageVector = Icons.Default.Share,
                     contentDescription = null
                 )
             }
             IconButton(onClick = onBrowsingClick) {
                 Icon(
+                    modifier = Modifier
+                        .semantics {
+                            contentDescription = "Website Button"
+                        },
                     painter = painterResource(id = R.drawable.ic_network),
                     contentDescription = null
                 )

@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material3.Text
+import androidx.compose.material3.contentColorFor
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.derivedStateOf
@@ -23,6 +24,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.paging.compose.LazyPagingItems
@@ -63,7 +66,7 @@ fun HomeScreen(
     ) {
         Image(
             painter = painterResource(id = R.drawable.ic_logo),
-            contentDescription = null,
+            contentDescription = "App Logo",
             modifier = Modifier
                 .width(150.dp)
                 .height(30.dp)
@@ -75,7 +78,10 @@ fun HomeScreen(
         SearchBar(
             modifier = Modifier
                 .padding(horizontal = MediumPadding1)
-                .fillMaxWidth(),
+                .fillMaxWidth()
+                .semantics {
+                           contentDescription = "Search Bar"
+                },
             text = "",
             readOnly = true,
             onValueChange = {},
@@ -89,6 +95,9 @@ fun HomeScreen(
 
         Text(
             text = titles, modifier = Modifier
+                .semantics {
+                    contentDescription = "Headline Text"
+                }
                 .fillMaxWidth()
                 .padding(start = MediumPadding1)
                 .horizontalScroll(scrollState, enabled = false),
