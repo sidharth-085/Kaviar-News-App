@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -66,7 +65,7 @@ fun ArticleCard(
                 .padding(5.dp, 0.dp, 0.dp, 0.dp)
         ) {
             Text(
-                text = article.title,
+                text = article.title!!,
                 style = MaterialTheme.typography.bodyMedium.copy(),
                 color = colorResource(id = R.color.text_title),
                 maxLines = 2,
@@ -76,7 +75,7 @@ fun ArticleCard(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = article.source.name,
+                    text = article.source!!.name,
                     style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
                     color = colorResource(id = R.color.body),
                     textAlign = TextAlign.Center
@@ -90,7 +89,7 @@ fun ArticleCard(
                 )
                 Spacer(modifier = Modifier.width(ExtraSmallPadding2))
                 Text(
-                    text = article.publishedAt,
+                    text = article.publishedAt!!,
                     style = MaterialTheme.typography.labelSmall,
                     color = colorResource(id = R.color.body),
                     textAlign = TextAlign.Center
