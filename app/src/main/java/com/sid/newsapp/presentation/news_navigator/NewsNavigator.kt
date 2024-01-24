@@ -23,6 +23,7 @@ import com.sid.newsapp.R
 import com.sid.newsapp.domain.model.Article
 import com.sid.newsapp.presentation.bookmark.BookmarkScreen
 import com.sid.newsapp.presentation.bookmark.BookmarkViewModel
+import com.sid.newsapp.presentation.contact_us.ContactUs
 import com.sid.newsapp.presentation.details.DetailsScreen
 import com.sid.newsapp.presentation.details.DetailsViewModel
 import com.sid.newsapp.presentation.home.HomeScreen
@@ -115,7 +116,8 @@ fun NewsNavigator() {
                         )
                     },
                     event = viewModel::onEvent,
-                    state = viewModel.state.value
+                    state = viewModel.state.value,
+                    navController = navController
                 )
             }
             composable(route = Route.SearchScreen.route) {
@@ -159,6 +161,10 @@ fun NewsNavigator() {
                         )
                     }
                 )
+            }
+
+            composable(route = Route.ContactUsScreen.route) {
+                ContactUs(navController = navController)
             }
         }
     }
