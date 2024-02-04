@@ -164,7 +164,7 @@ fun NewsNavigator() {
             }
 
             composable(route = Route.ContactUsScreen.route) {
-                ContactUs(navController = navController)
+                ContactUs()
             }
         }
     }

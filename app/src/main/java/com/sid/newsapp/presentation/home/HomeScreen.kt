@@ -97,12 +97,12 @@ fun HomeScreen(
 
             IconButton(
                 onClick = {
-                          navController.navigate(Route.ContactUsScreen.route)
+                    navController.navigate(Route.ContactUsScreen.route)
                 },
                 colors = IconButtonDefaults.iconButtonColors(
                     containerColor = Color.Transparent
                 ),
-                modifier = Modifier.padding(0.dp, 0.dp, 20.dp, 0.dp)
+                modifier = Modifier.padding(end = 20.dp)
             ) {
                 Icon(painter = painterResource(
                     id = R.drawable.ic_contact_us),
