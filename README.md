@@ -1,6 +1,11 @@
-# Kaviar: A Short News Android Application
+<div align="center">
+</br>
+<img src="https://github.com/user-attachments/assets/b0958d8c-64a3-4296-816a-27e6d3f446f2" width="200" />
+</div>
 
-Kaviar: Streamlined global news in 60 words, featuring a robust search, one-click full-article access, effortless sharing options, and a personalized bookmark section for curated updates on the go.
+<h1 align="center">📰 Kaviar: A Short News Android Application</h1>
+
+Kaviar is a news aggregation app that brings the latest headlines to your fingertips. It allows you to save your favourite articles, search for specific news topics, and easily share stories with others, all in one convenient place.
 
 # Screenshots
 
