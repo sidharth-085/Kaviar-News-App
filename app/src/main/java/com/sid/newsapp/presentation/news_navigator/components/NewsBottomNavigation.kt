@@ -68,7 +68,7 @@ data class BottomNavigationItem(
     val text: String
 )
 
-@Preview
+@Preview(showBackground = true)
 @Preview(uiMode = UI_MODE_NIGHT_YES)
 @Composable
 fun NewsBottomNavigationPreview() {

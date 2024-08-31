@@ -37,7 +37,6 @@ import com.sid.newsapp.presentation.search.SearchViewModel
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun NewsNavigator() {
-
     val bottomNavigationItems = remember {
         listOf(
             BottomNavigationItem(icon = R.drawable.ic_home, text = "Home"),
@@ -65,8 +64,9 @@ fun NewsNavigator() {
                 backStackState?.destination?.route == Route.BookmarkScreen.route
     }
 
-
-    Scaffold(modifier = Modifier.fillMaxSize(), bottomBar = {
+    Scaffold(
+        modifier = Modifier.fillMaxSize(),
+        bottomBar = {
         if (isBottomBarVisible) {
             NewsBottomNavigation(
                 items = bottomNavigationItems,

@@ -89,7 +89,7 @@ fun ArticleCard(
                 )
                 Spacer(modifier = Modifier.width(ExtraSmallPadding2))
                 Text(
-                    text = article.publishedAt!!,
+                    text = article.publishedAt!!.substring(0, 10),
                     style = MaterialTheme.typography.labelSmall,
                     color = colorResource(id = R.color.body),
                     textAlign = TextAlign.Center
