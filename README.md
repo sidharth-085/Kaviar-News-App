@@ -61,28 +61,6 @@ Kaviar is a comprehensive news aggregation app designed to provide users with ea
 
 - **Room :** Room is used for local data storage, providing a reliable and efficient way to manage app-related data.
 
-# 👀 Package Structure
-
-    com.sid.encrypto    # Root Package
-    
-    ├── data                # For data handling.
-    |   ├── model           # Model data classes, for local entities.
-    │   ├── repository      # Single source of data.
-    │   └── room            # For saving data.
-    |
-    ├── adapter             # All Adapters for recyclerViews              
-    │ 
-    |── service             # Notification Service
-    |
-    ├── ui                  # UI/View layer
-    |   ├── auth            # For Security
-    |   └── fragments       # All fragments     
-    │   └── splashScreen    # SplashScreen
-    |
-    ├── utils               # Utility Classes / Kotlin extensions
-    |
-    └── viewmodel           # Generates a binding class for each XML layout file
-
 # 👷‍♂️ Architecture
 
 This app uses [MVVM(Model View View-Model)](https://developer.android.com/topic/architecture#recommended-app-arch) architecture.
