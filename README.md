@@ -3,7 +3,7 @@
 <img src="https://github.com/user-attachments/assets/b0958d8c-64a3-4296-816a-27e6d3f446f2" width="200" />
 </div>
 
-<h1 align="center">📰 Kaviar: A Short News Android Application</h1>
+<h1 align="center">📰 Kaviar: A News Android Application</h1>
 
 Kaviar is a news aggregation app that brings the latest headlines to your fingertips. It allows you to save your favourite articles, search for specific news topics, and easily share stories with others, all in one convenient place.
 
