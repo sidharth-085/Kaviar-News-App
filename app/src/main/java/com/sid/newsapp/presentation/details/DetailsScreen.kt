@@ -112,7 +112,7 @@ fun DetailsScreen(
                 )
                 Spacer(modifier = Modifier.height(10.dp))
                 Text(
-                    text = article.content!!,
+                    text = article.description!!,
                     style = MaterialTheme.typography.bodyMedium,
                     color = colorResource(
                         id = R.color.body
