@@ -1,7 +1,7 @@
 package com.sid.newsapp.data.remote
 
 import com.sid.newsapp.data.remote.dto.NewsResponse
-import com.sid.newsapp.util.Constants.API_KEY
+import com.sid.newsapp.presentation.utils.Constants.API_KEY
 import retrofit2.http.GET
 import retrofit2.http.Query
 
